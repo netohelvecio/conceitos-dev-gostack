@@ -1,9 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/node,dotenv,react,reactnative,yarn,appbuilder,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,dotenv,react,reactnative,yarn,appbuilder,visualstudiocode
-
-### AppBuilder ###
-.ab/
+# Created by https://www.toptal.com/developers/gitignore/api/node,yarn,react,reactnative,dotenv,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,react,reactnative,dotenv,visualstudiocode
 
 ### dotenv ###
 .env
@@ -405,4 +401,4 @@ Temporary Items
 # .yarn/cache
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/node,dotenv,react,reactnative,yarn,appbuilder,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/node,yarn,react,reactnative,dotenv,visualstudiocode
