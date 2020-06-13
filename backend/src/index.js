@@ -36,7 +36,7 @@ function validateProjectId(request, response, next) {
   return next();
 }
 
-app.use(logRequests);
+app.use('/projects/:id', logRequests);
 
 app.get('/projects', (request, response) => {
   const { name } = request.query;
