@@ -30,8 +30,9 @@ button {
 
 h1 {
   font-size: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   text-align: center;
+  color: #fff;
 }
 
 .container {
@@ -65,4 +66,46 @@ h1 {
 
 .container .list-projects li span {
   font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+form input {
+  width: 100%;
+  border: 0;
+  background-color: #eee;
+  padding: 0.8em 1.8em;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+form input::placeholder {
+  color: #666;
+}
+
+form button {
+  width: 100%;
+  border: 2px solid #dc493a;
+  background-color: #fff;
+  color: #dc493a;
+  padding: 1em 1.8em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+form button:hover {
+  background-color: #dc493a;
+  color: #fff;
 }

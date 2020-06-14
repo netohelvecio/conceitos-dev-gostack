@@ -6,8 +6,10 @@ import './App.css';
 
 function App() {
   const [projects, setProjects] = useState([]);
+  const [name, setName] = useState('');
+  const [owner, setOwner] = useState('');
 
-  useEffect(() => {
+  function handleProjects() {
     api.get('projects')
       .then(response => {
         setProjects(response.data);
@@ -16,11 +18,49 @@ function App() {
       .catch(err => {
         console.log(err.response.data);
       });
+  }
+
+  useEffect(() => {
+    handleProjects();
   }, [])
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    
+    api.post('projects', { name, owner })
+      .then(() => {
+        handleProjects();
+        setOwner('');
+        setName('');
+      })
+      .catch(err => {
+        console.log(err.response.data);
+      });
+  }
 
   return (
     <div className="container">
       <h1>Projetos</h1>
+
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          placeholder="Nome do projeto"
+          value={name} 
+          onChange={e => setName(e.target.value)}
+          required
+        />
+
+        <input 
+          type="text" 
+          placeholder="Criador do projeto"
+          value={owner} 
+          onChange={e => setOwner(e.target.value)}
+          required 
+        />
+
+        <button type="submit">Adionar projeto</button>
+      </form>
 
       <ul className="list-projects">
         {projects.map(project => (
