@@ -9,7 +9,7 @@ function App() {
   const [name, setName] = useState('');
   const [owner, setOwner] = useState('');
 
-  function handleProjects() {
+  useEffect(() => {
     api.get('projects')
       .then(response => {
         setProjects(response.data);
@@ -18,18 +18,14 @@ function App() {
       .catch(err => {
         console.log(err.response.data);
       });
-  }
-
-  useEffect(() => {
-    handleProjects();
   }, [])
 
   function handleSubmit(e) {
     e.preventDefault();
     
     api.post('projects', { name, owner })
-      .then(() => {
-        handleProjects();
+      .then(response => {
+        setProjects([...projects, response.data]);
         setOwner('');
         setName('');
       })
