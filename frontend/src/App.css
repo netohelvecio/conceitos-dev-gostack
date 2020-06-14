@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body, #app {
+  background-color: #4392f1;
+  font: 14px 'Roboto', sans-serif;
+  color: #ece8ef;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.container {
+  padding: 2em 0;
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .list-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
+.container .list-projects li {
+  padding: 1em 2.5em; 
+  background-color: #dc493a;
+  border-radius: 8px;
+  box-shadow: 2px 3px 6px -2px #000000;
+}
+
+.container .list-projects li h3 {
+  font-size: 2em;
+  margin-bottom: 0.8em;
+}
+
+.container .list-projects li span {
+  font-size: 1.2em;
+}
