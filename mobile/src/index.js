@@ -44,7 +44,7 @@ export default function App() {
         )}
       />
 
-      <TouchableOpacity style={styles.button} onPress={addProject}>
+      <TouchableOpacity activeOpacity={0.6} style={styles.button} onPress={addProject}>
         <Text style={styles.buttonText}>Adicionar projeto</Text>
       </TouchableOpacity>
     </View>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     borderRadius: 32,
   },
   buttonText: {
-    fontSize: 20,
+    fontSize: 22,
     color: '#dc493a',
     fontWeight: 'bold',
   }
